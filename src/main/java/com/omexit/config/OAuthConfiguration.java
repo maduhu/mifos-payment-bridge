@@ -128,6 +128,7 @@ public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
         clients.jdbc(dataSource)
                 .passwordEncoder(passwordEncoder)
                 .withClient("client")
+
                 .authorizedGrantTypes("authorization_code", "client_credentials",
                         "refresh_token", "password", "implicit")
                 .authorities("ROLE_CLIENT")
